@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-80+8$uei08223-82-7jn#n*#3^0d)bgs-xs(t(sh(fy*3s!9l5
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','discover-indian.herokuapp.com']
 
 
 # Application definition
