@@ -1,1 +1,1 @@
-web: gunicorn DISCOVER.wsgi --log-file -
+web: gunicorn amaan.wsgi --log-file -
