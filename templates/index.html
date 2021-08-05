@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'home/aman3.css' %}">
+    <title>Discover</title>
+   
+</head>
+<body>
+    <header>    
+        <nav>
+            <div class="logo">
+               Discover
+            </div>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="/" class="active">home</a></li>
+                <li><a href="account/about">about</a></li>
+                <li><a href="account/contact">contact</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="account/shops">shop</a></li>
+                <li><a href="account/logout">logout</a></li> 
+                 <li><a style="color:rgb(218, 103, 27);">howdy,{{user.first_name}}</a></li>
+                 {% else %}
+                 <li><a href="account/login">shop</a></li>
+                  <li><a href="account/register">register</a></li>
+                  <li><a href="account/login">login</a></li>
+                 {% endif %}
+            </ul>
+         </nav>
+         <h1 class="dis">Discover The Beauty of India</h1>
+    </header>
+    <script src="{% static 'home/aman.js' %}"></script>
+    </body>
+</html>

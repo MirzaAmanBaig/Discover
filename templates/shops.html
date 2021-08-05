@@ -1,0 +1,19 @@
+{% extends 'base3.html' %}
+{% load static %}
+{% static "image" as baseUrl%}
+{% block body %}
+<section>
+    {% for dest in dests%}
+    <div class="cards-list">
+        <div class="card 1">
+          <div class="card_image"><a href="{{dest.link}}"><img src="{{dest.image.url}}"></a></div>
+          <div class="card_title title-white">
+            <p><h2>{{dest.name}}</h2>{{dest.desc}} <h4 style="color:white;">${{dest.price}}</h4></p>
+          </div>
+        </div>
+        </div>
+   {% endfor%}
+</section>
+
+{% endblock %}
+
