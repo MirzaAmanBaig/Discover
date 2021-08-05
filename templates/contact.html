@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block body %}
+      <form action="contact" method="POST">
+        {% csrf_token %}
+        <div class="login-box">
+           <h1>Contact</h1>
+    <div class="textbox">
+       <input type="text" name="firstname" placeholder="firstname"><br>
+    </div>
+    <div class="textbox">
+        <input type="text" name="lastname" placeholder="lastname"><br>
+     </div>
+     <div class="textbox">
+        <input type="email" name="email" placeholder="email"><br>
+     </div>
+       <div class="textbox">
+    <textarea class="form-control" name="feedback" placeholder="feedback" rows="3"></textarea>
+  </div>
+     <input class="btn" type="submit" value="submit">
+</form>
+       {% endblock %}

@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #1b1b1b;
+}
+
+.login-box{
+    width:200px ;
+    /* position: absolute; */
+    margin-left: 15%;
+    margin-top: 5%;
+    /* transform: translate(-50%,50%); */
+    /* color: rgb(0, 0, 0); */
+    color: #fff;
+}
+
+.textbox{
+    width: 100%;
+    overflow:hidden ;
+    font-size: 20px;
+    padding: 8px 0;
+    margin:8px 0 ;
+    border-bottom:1px solid white ;
+}
+
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(184, 184, 184);
+    font-size:18px ;
+    width: 80%;
+    float: left;
+    margin:0 10px ;
+}
+
+.btn{
+
+    width: 100%;
+    background: none;
+    border: 2px solid rgb(0, 0, 0);
+    color:#ffffff;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin:12px 0; 
+}
+.regis-box{
+    width:200px ;
+    /* position: absolute; */
+    margin-left: 15%;
+    margin-top: 5%;
+    /* transform: translate(-50%,50%); */
+    /* color: rgb(0, 0, 0); */
+    color: #fff;
+    
+}
+.regist a{
+    text-decoration: none;
+    color:blue;
+}
+.alertmesreg{
+    color: red;
+    /* margin: 295px ; */
+    text-align: center;
+    text-transform:uppercase;
+    margin: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  /* background: #1b1b1b; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: rgb(218, 103, 27);
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+ nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+} 
+
+
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: rgb(218, 103, 27);
+  text-decoration: none;
+}
+nav .menu-btn i{
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  overflow: visible;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: rgb(218, 103, 27);
+  }
+}
+.alert{
+  /* margin:10px; */
+ width: 100%;
+ text-align: center;
+}
+
+.ahead{
+  position: static;
+  text-align: center;
+  color: rgb(218, 103, 27);
+  font-size: 25px;
+}
+
+.ahead1{
+  position: static;
+  text-align: center;
+  color: #424446;
+}
+
+.subs{
+  position: static;
+  color: #424446;
+  text-align: end;
+}
+.apara,.apara2{
+  position: static;
+  color: #424446;
+}
+
+.feed{
+ background-color:#1b1b1b;
+ font-size: 15px ;
+ border-radius: 4px;
+ text-align: center;
+ color: white;
+}
+
