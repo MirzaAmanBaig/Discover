@@ -4,6 +4,10 @@ from django.contrib import messages
 from django.contrib.auth.models import User,auth
 from .models import Destination
 from .models import Contact
+from django.views.decorators.cache import cache_control
+
+
+
 # Create your views here.
 def register(request):
     if request.method=='POST':
@@ -35,7 +39,7 @@ def register(request):
     else:
         return render(request,'registration.html') 
 
-    
+@cache_control(no_cache=True, must_revalidate=True, no_store=True)
 def login(request):
     if request.method=='POST':
         username=request.POST['username']
@@ -49,12 +53,15 @@ def login(request):
         else:
             messages.warning(request,"invalid credentials")
             return redirect("login")
+           
     else:
         return render(request,'login.html')
 
+@cache_control(no_cache=True, must_revalidate=True, no_store=True)
 def logout(request):
     auth.logout(request)
     return redirect("/")
+
 
 def contact(request):
     if request.method=='POST':
@@ -66,9 +73,11 @@ def contact(request):
         contact.save()
     return render(request,"contact.html")
 
+
 def about(request):
     return render(request,"about.html")
 
+@cache_control(no_cache=True, must_revalidate=True, no_store=True)
 def shops(request):
     dests=Destination.objects.all()
     return render(request,"shops.html",{"dests":dests})
